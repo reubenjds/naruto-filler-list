@@ -4,11 +4,13 @@
 	let shows = [
 		{
 			name: 'Naruto',
-			image: '/naruto.jpg'
+			image: '/naruto.jpg',
+			link: '/naruto'
 		},
 		{
 			name: 'Naruto Shippuden',
-			image: '/naruto_shippuden.jpg'
+			image: '/naruto_shippuden.jpg',
+			link: '/naruto_shippuden'
 		}
 	];
 </script>
