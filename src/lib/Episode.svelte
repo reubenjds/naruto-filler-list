@@ -15,16 +15,17 @@
 
 <div>
 	<div
-		class="card w-full bg-base-300 shadow-xl image-full min-h-[20rem]"
+		class="card w-full bg-base-300 shadow-xl image-full min-h-[20rem] transition-all duration-300 ease-in-out"
 		style="background-color: {epColour()};"
 	>
-		<div class="card-body">
-			<!-- add episode number at top right -->
+		<div class="card-body p-4 md:p-6 lg:p-8">
 			<div class="absolute top-4 right-4 bg-base-500 text-white p-1 rounded-bl-lg">
 				<p class="text-xs">{episode.number}</p>
 			</div>
-			<h2 class="">{episode.title}</h2>
-			<p class="line-clamp-5 whitespace-pre-line">{episode.explanation}</p>
+			<h2 class="pb-3 text-lg md:text-xl lg:text-2xl">{episode.title}</h2>
+			<p class="line-clamp-5 whitespace-pre-line italic text-sm md:text-base lg:text-lg">
+				{episode.explanation}
+			</p>
 			<div class="flex justify-between items-center">
 				<p class="text-xs bg-base-500">{episode.type}</p>
 			</div>
