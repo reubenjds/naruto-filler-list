@@ -1,4 +1,4 @@
-import type { Episode } from '$lib/index';
+import type { Episode, Arc } from '$lib/index';
 
 export const naruto: Episode[] = [
 	{
@@ -1328,6 +1328,109 @@ export const naruto: Episode[] = [
 		title: 'Departure',
 		type: 'Mixed Canon/Filler',
 		explanation:
-			'This is the final episode of Naruto, with some canon elements towards the end. If you skip the filler arc (216-219), watch episode 220 starting from 12:18.'
+			'Some canon elements towards the end. If you skip the filler arc (216-219), watch starting from 12:18.'
+	}
+];
+
+export const narutoArcs: Arc[] = [
+	{
+		name: 'Prologue - Land of Waves',
+		episode_start: 1,
+		episode_end: 19
+	},
+	{
+		name: 'Chunin Exams - The Written Exam & Forest of Death',
+		episode_start: 20,
+		episode_end: 44
+	},
+	{
+		name: 'Chunin Exams - The Preliminary Rounds',
+		episode_start: 45,
+		episode_end: 51
+	},
+	{
+		name: 'Chunin Exams - The Final Rounds & Konoha Crush',
+		episode_start: 52,
+		episode_end: 80
+	},
+	{
+		name: 'Search for Tsunade',
+		episode_start: 81,
+		episode_end: 100
+	},
+	{
+		name: 'Sasuke Recovery Mission',
+		episode_start: 107,
+		episode_end: 135
+	},
+	{
+		name: 'Land of Tea Escort Mission',
+		episode_start: 102,
+		episode_end: 106
+	},
+	{
+		name: 'Land of Rice Fields Investigation Mission',
+		episode_start: 136,
+		episode_end: 141
+	},
+	{
+		name: 'Mizuki Tracking Mission',
+		episode_start: 142,
+		episode_end: 147
+	},
+	{
+		name: 'Bikochu Search Mission',
+		episode_start: 148,
+		episode_end: 151
+	},
+	{
+		name: 'Kurosuki Family Removal Mission',
+		episode_start: 152,
+		episode_end: 157
+	},
+	{
+		name: 'Buried Gold Excavation Mission',
+		episode_start: 158,
+		episode_end: 160
+	},
+	{
+		name: 'Peddlers Escort Mission',
+		episode_start: 161,
+		episode_end: 167
+	},
+	{
+		name: 'Star Guard Mission',
+		episode_start: 178,
+		episode_end: 183
+	},
+	{
+		name: 'Cursed Warrior Extermination Mission',
+		episode_start: 162,
+		episode_end: 167
+	},
+	{
+		name: 'Sea Country Mission',
+		episode_start: 169,
+		episode_end: 173
+	},
+	{
+		name: 'Konoha Plans Recapture Mission',
+		episode_start: 174,
+		episode_end: 176
+	},
+	{
+		name: 'Gantetsu Escort Mission',
+		episode_start: 209,
+		episode_end: 212
+	},
+	{
+		name: 'Menma Memory Search Mission',
+		episode_start: 213,
+		episode_end: 215
+	},
+	{
+		name: 'Sunagakure Support Mission',
+		episode_start: 216,
+		episode_end: 220
 	}
 ];

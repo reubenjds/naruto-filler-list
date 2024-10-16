@@ -6,3 +6,9 @@ export type Episode = {
 	type: string;
 	explanation: string;
 };
+
+export type Arc = {
+	name: string;
+	episode_start: number;
+	episode_end: number;
+};
