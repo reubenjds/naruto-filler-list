@@ -5,7 +5,9 @@
 
 	let isSmallScreen = false;
 	let Episodes = naruto;
+
 	let selectedArc = -1;
+	let selectedEpisode = '';
 
 	$: if (selectedArc !== -1) {
 		const arc = narutoArcs[selectedArc];
@@ -13,6 +15,12 @@
 			(episode) =>
 				Number(episode.number) <= arc.episode_end && Number(episode.number) >= arc.episode_start
 		);
+	} else {
+		Episodes = naruto;
+	}
+
+	$: if (selectedEpisode) {
+		Episodes = naruto.filter((episode) => episode.number.includes(selectedEpisode.trim()));
 	} else {
 		Episodes = naruto;
 	}
@@ -26,7 +34,11 @@
 	<div class="flex flex-col justify-center items-center min-h-screen gap-4 p-10">
 		<h1 class="text-4xl font-bold text-center pt-2 pb-2">Naruto Filler List</h1>
 		<div class="join flex place-items-center">
-			<input class="input input-bordered join-item" placeholder="Episode" />
+			<input
+				bind:value={selectedEpisode}
+				class="input input-bordered join-item"
+				placeholder="Episode"
+			/>
 			{#if isSmallScreen}
 				<!-- Modal for small screens -->
 				<input type="checkbox" id="modal-toggle" class="modal-toggle" />
