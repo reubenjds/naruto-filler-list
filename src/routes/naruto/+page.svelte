@@ -9,20 +9,20 @@
 	let selectedArc = -1;
 	let selectedEpisode = '';
 
-	$: if (selectedArc !== -1) {
-		const arc = narutoArcs[selectedArc];
-		Episodes = naruto.filter(
-			(episode) =>
-				Number(episode.number) <= arc.episode_end && Number(episode.number) >= arc.episode_start
-		);
-	} else {
-		Episodes = naruto;
-	}
+	$: {
+		if (selectedArc !== -1) {
+			const arc = narutoArcs[selectedArc];
+			Episodes = naruto.filter(
+				(episode) =>
+					Number(episode.number) <= arc.episode_end && Number(episode.number) >= arc.episode_start
+			);
+		} else {
+			Episodes = naruto;
+		}
 
-	$: if (selectedEpisode) {
-		Episodes = naruto.filter((episode) => episode.number.includes(selectedEpisode.trim()));
-	} else {
-		Episodes = naruto;
+		if (selectedEpisode) {
+			Episodes = Episodes.filter((episode) => episode.number.includes(selectedEpisode.trim()));
+		}
 	}
 
 	onMount(() => {
