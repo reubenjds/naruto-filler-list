@@ -13,6 +13,8 @@
 			(episode) =>
 				Number(episode.number) <= arc.episode_end && Number(episode.number) >= arc.episode_start
 		);
+	} else {
+		Episodes = naruto;
 	}
 
 	onMount(() => {
@@ -36,9 +38,8 @@
 						<select
 							bind:value={selectedArc}
 							class="select select-bordered w-full max-w-xs join-item mt-6"
-							placeholder="Select Arc"
 						>
-							<option value="-1" disabled>Select Arc</option>
+							<option value={-1} selected>All Episodes</option>
 							{#each narutoArcs as arc, index}
 								<option value={index}>{arc.name}</option>
 							{/each}
@@ -55,6 +56,7 @@
 							bind:value={selectedArc}
 							class="select select-bordered w-full max-w-xs join-item"
 						>
+							<option value={-1} selected>All Episodes</option>
 							{#each narutoArcs as arc, index}
 								<option value={index}>{arc.name}</option>
 							{/each}
