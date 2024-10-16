@@ -13,8 +13,6 @@
 			(episode) =>
 				Number(episode.number) <= arc.episode_end && Number(episode.number) >= arc.episode_start
 		);
-	} else {
-		Episodes = naruto;
 	}
 
 	onMount(() => {
@@ -66,9 +64,11 @@
 			{/if}
 		</div>
 		<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-			{#each Episodes as episode}
-				<Episode {episode} />
-			{/each}
+			{#key Episodes}
+				{#each Episodes as episode}
+					<Episode {episode} />
+				{/each}
+			{/key}
 		</div>
 	</div>
 </main>
