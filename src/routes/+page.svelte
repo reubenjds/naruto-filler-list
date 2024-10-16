@@ -16,10 +16,10 @@
 </script>
 
 <main>
-	<div class="flex flex-col justify-center items-center min-h-screen">
+	<div class="flex flex-col justify-center items-center min-h-screen p-5">
 		<h1 class="text-4xl font-bold text-center py-2">Naruto Filler List</h1>
 		<div>
-			<div class="flex flex-row gap-4">
+			<div class="flex flex-col sm:flex-row gap-4">
 				{#each shows as show}
 					<Show {show} />
 				{/each}
