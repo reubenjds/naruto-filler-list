@@ -8,6 +8,7 @@
 
 	let selectedArc = -1;
 	let selectedEpisode = '';
+	let showTitles = true;
 
 	$: {
 		if (selectedArc !== -1) {
@@ -43,7 +44,7 @@
 				<!-- Modal for small screens -->
 				<input type="checkbox" id="modal-toggle" class="modal-toggle" />
 				<div class="modal">
-					<div class="modal-box relative">
+					<div class="modal-box relative flex flex-col gap-2">
 						<label for="modal-toggle" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
 							>✕</label
 						>
@@ -56,31 +57,53 @@
 								<option value={index}>{arc.name}</option>
 							{/each}
 						</select>
+						<div class="form-control">
+							<label class="label cursor-pointer">
+								<span class="label-text">Show Episode Titles</span>
+								<input
+									type="checkbox"
+									bind:checked={showTitles}
+									class="checkbox checkbox-warning"
+								/>
+							</label>
+						</div>
 					</div>
 				</div>
 				<label for="modal-toggle" class="btn join-item m-1">Options</label>
 			{:else}
 				<!-- Dropdown for larger screens -->
-				<div class="dropdown dropdown-bottom">
-					<div tabindex="0" role="button" class="btn join-item m-1">Options</div>
+				<details class="dropdown">
+					<summary class="btn join-item m-1">Options</summary>
 					<ul class="dropdown-content menu bg-base-100 rounded-box z-[99] w-max p-2 shadow">
-						<select
-							bind:value={selectedArc}
-							class="select select-bordered w-full max-w-xs join-item"
-						>
-							<option value={-1} selected>All Episodes</option>
-							{#each narutoArcs as arc, index}
-								<option value={index}>{arc.name}</option>
-							{/each}
-						</select>
+						<div class="flex flex-col gap-2 p-4">
+							<select
+								bind:value={selectedArc}
+								class="select select-bordered w-full max-w-xs join-item"
+							>
+								<option value={-1} selected>All Episodes</option>
+								{#each narutoArcs as arc, index}
+									<option value={index}>{arc.name}</option>
+								{/each}
+							</select>
+							<div class="form-control">
+								<label class="label cursor-pointer">
+									<span class="label-text">Show Episode Titles</span>
+									<input
+										type="checkbox"
+										bind:checked={showTitles}
+										class="checkbox checkbox-warning"
+									/>
+								</label>
+							</div>
+						</div>
 					</ul>
-				</div>
+				</details>
 			{/if}
 		</div>
 		<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
 			{#key Episodes}
 				{#each Episodes as episode}
-					<Episode {episode} />
+					<Episode {episode} {showTitles} />
 				{/each}
 			{/key}
 		</div>
