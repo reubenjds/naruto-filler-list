@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
+
 	import { naruto, narutoArcs } from '$lib/episodes';
 	import Episode from '$lib/Episode.svelte';
 	import { onMount } from 'svelte';
@@ -32,7 +34,7 @@
 </script>
 
 <main>
-	<div class="flex flex-col justify-center items-center min-h-screen gap-4 p-10">
+	<div class="flex flex-col place-items-center min-h-screen gap-4 p-10">
 		<h1 class="text-4xl font-bold text-center pt-2 pb-2">Naruto Filler List</h1>
 		<div class="join flex place-items-center">
 			<input
@@ -100,12 +102,15 @@
 				</details>
 			{/if}
 		</div>
-		<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-			{#key Episodes}
+		{#key Episodes}
+			<div
+				class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+				transition:fly={{ y: 300, duration: 550 }}
+			>
 				{#each Episodes as episode}
 					<Episode {episode} {showTitles} />
 				{/each}
-			{/key}
-		</div>
+			</div>
+		{/key}
 	</div>
 </main>
