@@ -224,7 +224,7 @@
 						<tr>
 							<th class="md:text-base text-center">Episode</th>
 							<th class="md:text-base">Title</th>
-							<th class="md:text-base">Type</th>
+							<th class="md:text-base text-center">Type</th>
 						</tr>
 					</thead>
 					<tbody>
