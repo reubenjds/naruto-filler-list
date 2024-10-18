@@ -234,17 +234,65 @@
 								<td class={showTitles ? 'md:text-base' : 'md:text-base text-transparent'}
 									>{episode.title}</td
 								>
-								<td>
-									<span
-										class="badge {episode.type === 'Filler'
-											? 'badge-error'
-											: episode.type === 'Mixed Canon/Filler'
-												? 'badge-warning'
-												: 'badge-success'} text-xs sm:text-base h-fit"
-									>
-										{episode.type}
-									</span>
-								</td>
+								{#if episode.type === 'Filler' || episode.explanation !== ''}
+									<td class="md:text-base text-center">
+										{#if isSmallScreen}
+											<input
+												type="checkbox"
+												id="modal-toggle-{episode.number}"
+												class="modal-toggle"
+											/>
+											<div class="modal">
+												<div class="modal-box relative">
+													<label
+														for="modal-toggle-{episode.number}"
+														class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label
+													>
+													<h3 class="text-lg font-bold">
+														Episode {episode.number} - {episode.type}
+													</h3>
+													<p class="py-4">{episode.explanation}</p>
+												</div>
+											</div>
+											<label
+												for="modal-toggle-{episode.number}"
+												class="badge {episode.type === 'Filler'
+													? 'badge-error'
+													: 'badge-warning'} text-xs sm:text-base h-fit cursor-pointer relative"
+											>
+												{episode.type}
+												<span
+													class="absolute top-0 right-0 text-xs indicator-item badge badge-primary px-1"
+													style="transform: translate(50%, -50%);">?</span
+												>
+											</label>
+										{:else}
+											<span
+												class="badge {episode.type === 'Filler'
+													? 'badge-error'
+													: 'badge-warning'} text-xs sm:text-base h-fit cursor-pointer tooltip tooltip-left relative"
+												data-tip={episode.explanation}
+											>
+												{episode.type}
+												<span
+													class="absolute top-0 right-0 text-xs indicator-item badge badge-primary px-1"
+													style="transform: translate(50%, -50%);">?</span
+												>
+											</span>
+										{/if}
+									</td>
+								{:else if episode.type === 'Mixed Canon/Filler'}
+									<td class="md:text-base text-center">
+										<span class="badge badge-warning text-xs sm:text-base h-fit"
+											>Mixed Canon/Filler</span
+										>
+									</td>
+								{:else}
+									<td class="md:text-base text-center">
+										<span class="badge badge-success text-xs sm:text-base h-fit">Canon</span>
+									</td>
+								{/if}
+								<!-- <td class="md:text-base">{episode.explanation}</td> -->
 							</tr>
 						{/each}
 					</tbody>
