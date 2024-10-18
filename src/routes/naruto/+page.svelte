@@ -11,6 +11,7 @@
 	let selectedArc = -1;
 	let selectedEpisode = '';
 	let showTitles = true;
+	let useTable = false;
 
 	$: {
 		if (selectedArc !== -1) {
@@ -77,7 +78,7 @@
 				<details class="dropdown">
 					<summary class="btn join-item m-1">Options</summary>
 					<ul class="dropdown-content menu bg-base-100 rounded-box z-[99] w-max p-2 shadow">
-						<div class="flex flex-col gap-2 p-4">
+						<div class="flex flex-col gap-1 p-2">
 							<select
 								bind:value={selectedArc}
 								class="select select-bordered w-full max-w-xs join-item"
@@ -97,20 +98,61 @@
 									/>
 								</label>
 							</div>
+							<div class="form-control">
+								<label class="label cursor-pointer">
+									<span class="label-text">View as Table</span>
+									<input
+										type="checkbox"
+										bind:checked={useTable}
+										class="checkbox checkbox-warning"
+									/>
+								</label>
+							</div>
 						</div>
 					</ul>
 				</details>
 			{/if}
 		</div>
 		{#key Episodes}
-			<div
-				class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-				transition:fly={{ y: 300, duration: 550 }}
-			>
-				{#each Episodes as episode}
-					<Episode {episode} {showTitles} />
-				{/each}
-			</div>
+			{#if useTable}
+				<table class="table table-compact table-zebra place-content-center justify-center">
+					<thead>
+						<tr>
+							<th>Episode</th>
+							<th>Title</th>
+							<th>Type</th>
+						</tr>
+					</thead>
+					<tbody>
+						{#each Episodes as episode}
+							<tr>
+								<td>{episode.number}</td>
+								<td class={showTitles ? '' : 'blur'}>{episode.title}</td>
+								<td>
+									<span
+										class="badge {episode.type === 'Filler'
+											? 'badge-error'
+											: episode.type === 'Mixed Canon/Filler'
+												? 'badge-warning'
+												: 'badge-success'}"
+									>
+										{episode.type}
+									</span>
+								</td>
+							</tr>
+						{/each}
+					</tbody>
+				</table>
+			{:else}
+				<div
+					class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+					style="width: 100%; overflow-x: auto;"
+				>
+					{#each Episodes as episode}
+						<Episode {episode} {showTitles} />
+					{/each}
+				</div>
+			{/if}
 		{/key}
 	</div>
 </main>
