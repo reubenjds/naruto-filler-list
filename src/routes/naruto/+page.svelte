@@ -10,6 +10,8 @@
 	let selectedEpisode = '';
 	let showTitles = true;
 	let useTable = false;
+	let selectedEpisodeType = 'all';
+
 	let modal: HTMLDialogElement;
 
 	$: {
@@ -31,6 +33,19 @@
 			} else {
 				Episodes = Episodes.filter((episode) => episode.number.includes(selectedEpisode.trim()));
 			}
+		}
+
+		if (selectedEpisodeType !== 'all') {
+			Episodes = Episodes.filter((episode) => {
+				if (selectedEpisodeType === 'filler') {
+					return episode.type === 'Filler';
+				} else if (selectedEpisodeType === 'mixedCanonFiller') {
+					return episode.type === 'Mixed Canon/Filler';
+				} else if (selectedEpisodeType === 'canon') {
+					return episode.type === 'Canon';
+				}
+				return true;
+			});
 		}
 	}
 
@@ -56,10 +71,7 @@
 						<label for="modal-toggle" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
 							>✕</label
 						>
-						<select
-							bind:value={selectedArc}
-							class="select select-bordered w-full max-w-xs join-item mt-6"
-						>
+						<select bind:value={selectedArc} class="select select-bordered w-full join-item mt-6">
 							<option value={-1} selected>All Episodes</option>
 							{#each narutoArcs as arc, index}
 								<option value={index}>{arc.name}</option>
@@ -75,6 +87,54 @@
 								/>
 							</label>
 						</div>
+						<div class="form-control">
+							<label class="label cursor-pointer">
+								<span class="label-text">View as Table</span>
+								<input type="checkbox" bind:checked={useTable} class="checkbox checkbox-warning" />
+							</label>
+						</div>
+						<div class="form-control flex flex-row gap-2 items-start">
+							<label class="label cursor-pointer">
+								<input
+									type="radio"
+									name="episodeType"
+									value="all"
+									bind:group={selectedEpisodeType}
+									class="radio radio-info"
+								/>
+								<span class="label-text p-1">All</span>
+							</label>
+							<label class="label cursor-pointer">
+								<input
+									type="radio"
+									name="episodeType"
+									value="filler"
+									bind:group={selectedEpisodeType}
+									class="radio radio-error"
+								/>
+								<span class="label-text p-1">Filler</span>
+							</label>
+							<label class="label cursor-pointer">
+								<input
+									type="radio"
+									name="episodeType"
+									value="mixedCanonFiller"
+									bind:group={selectedEpisodeType}
+									class="radio radio-warning"
+								/>
+								<span class="label-text p-1">Mixed</span>
+							</label>
+							<label class="label cursor-pointer">
+								<input
+									type="radio"
+									name="episodeType"
+									value="canon"
+									bind:group={selectedEpisodeType}
+									class="radio radio-success"
+								/>
+								<span class="label-text p-1">Canon</span>
+							</label>
+						</div>
 					</div>
 				</div>
 				<label for="modal-toggle" class="btn join-item m-1">Options</label>
@@ -84,11 +144,8 @@
 					<summary class="btn join-item m-1">Options</summary>
 					<ul class="dropdown-content menu bg-base-100 rounded-box z-[99] w-max p-2 shadow">
 						<div class="flex flex-col gap-1 p-2">
-							<select
-								bind:value={selectedArc}
-								class="select select-bordered w-full max-w-xs join-item"
-							>
-								<option value={-1} selected>All Episodes</option>
+							<select bind:value={selectedArc} class="select select-bordered w-full join-item">
+								<option value={-1} selected>All Arcs</option>
 								{#each narutoArcs as arc, index}
 									<option value={index}>{arc.name}</option>
 								{/each}
@@ -113,6 +170,48 @@
 									/>
 								</label>
 							</div>
+							<div class="form-control flex flex-row gap-2 items-start">
+								<label class="label cursor-pointer">
+									<input
+										type="radio"
+										name="episodeType"
+										value="all"
+										bind:group={selectedEpisodeType}
+										class="radio radio-info"
+									/>
+									<span class="label-text p-1">All</span>
+								</label>
+								<label class="label cursor-pointer">
+									<input
+										type="radio"
+										name="episodeType"
+										value="filler"
+										bind:group={selectedEpisodeType}
+										class="radio radio-error"
+									/>
+									<span class="label-text p-1">Filler</span>
+								</label>
+								<label class="label cursor-pointer">
+									<input
+										type="radio"
+										name="episodeType"
+										value="mixedCanonFiller"
+										bind:group={selectedEpisodeType}
+										class="radio radio-warning"
+									/>
+									<span class="label-text p-1">Mixed Canon/Filler</span>
+								</label>
+								<label class="label cursor-pointer">
+									<input
+										type="radio"
+										name="episodeType"
+										value="canon"
+										bind:group={selectedEpisodeType}
+										class="radio radio-success"
+									/>
+									<span class="label-text p-1">Canon</span>
+								</label>
+							</div>
 						</div>
 					</ul>
 				</details>
@@ -123,23 +222,25 @@
 				<table class="table table-compact table-zebra place-content-center justify-center">
 					<thead>
 						<tr>
-							<th>Episode</th>
-							<th>Title</th>
-							<th>Type</th>
+							<th class="md:text-base text-center">Episode</th>
+							<th class="md:text-base">Title</th>
+							<th class="md:text-base">Type</th>
 						</tr>
 					</thead>
 					<tbody>
 						{#each Episodes as episode}
 							<tr>
-								<td>{episode.number}</td>
-								<td class={showTitles ? '' : ' text-transparent'}>{episode.title}</td>
+								<td class="md:text-base text-center">{episode.number}</td>
+								<td class={showTitles ? 'md:text-base' : 'md:text-base text-transparent'}
+									>{episode.title}</td
+								>
 								<td>
 									<span
 										class="badge {episode.type === 'Filler'
 											? 'badge-error'
 											: episode.type === 'Mixed Canon/Filler'
 												? 'badge-warning'
-												: 'badge-success'}"
+												: 'badge-success'} text-xs sm:text-base h-fit"
 									>
 										{episode.type}
 									</span>

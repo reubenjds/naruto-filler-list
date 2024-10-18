@@ -352,7 +352,7 @@ export const naruto: Episode[] = [
 	{
 		number: '59',
 		title: 'The Final Rounds: Rush to the Battle Arena!',
-		type: 'Mostly Filler',
+		type: 'Mixed Canon/Filler',
 		explanation: 'Mostly filler but has some connections to the main plot.'
 	},
 	{
@@ -816,7 +816,7 @@ export const naruto: Episode[] = [
 	{
 		number: '136',
 		title: 'Deep Cover?! A Super S-Ranked Mission',
-		type: 'Mostly Filler',
+		type: 'Mixed Canon/Filler',
 		explanation: 'Considered mostly filler, but has small story elements.'
 	},
 	{
