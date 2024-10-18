@@ -16,7 +16,7 @@
 
 <div>
 	<div
-		class="card w-full min-w-[20rem] bg-base-300 shadow-xl image-full min-h-[20rem] transition-all duration-300 ease-in-out"
+		class="card w-full min-w-[20%] bg-base-300 shadow-xl image-full min-h-[20rem] transition-all duration-300 ease-in-out"
 		style="background-color: {epColour()};"
 	>
 		<div class="card-body p-4 md:p-6 lg:p-8">
