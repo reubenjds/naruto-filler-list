@@ -155,7 +155,7 @@ export const naruto: Episode[] = [
 		number: '26',
 		title: 'Special Report: Live from the Forest of Death',
 		type: 'Filler',
-		explanation: 'Skippable filler recap.'
+		explanation: "Recap episode that summarizes the events of the Chunin Exam's early stages."
 	},
 	{
 		number: '27',
@@ -581,7 +581,8 @@ export const naruto: Episode[] = [
 		number: '97',
 		title: "Kidnapped! Naruto's Hot Spring Adventure!",
 		type: 'Filler',
-		explanation: 'Skippable filler with no ties to the main story.'
+		explanation:
+			'This episode features a comedic plot about Naruto and friends going to a hot spring.'
 	},
 	{
 		number: '98',
@@ -605,39 +606,39 @@ export const naruto: Episode[] = [
 		number: '101',
 		title: "Gotta See! Gotta Know! Kakashi-Sensei's True Face!",
 		type: 'Filler',
-		explanation:
-			"This filler is lighthearted and funny, focused on Team 7 trying to see Kakashi's face."
+		explanation: "Humorous episode focused on Team 7's attempts to see Kakashi's face."
 	},
 	{
 		number: '102',
 		title: 'Mission: Help an Old Friend in the Land of Tea',
 		type: 'Filler',
-		explanation:
-			'Part of the Land of Tea filler arc, introduces new characters but is unrelated to the main story.'
+		explanation: 'Land of Tea filler arc. You can skip this without missing any main story details.'
 	},
 	{
 		number: '103',
 		title: 'The Race is on! Trouble on the High Seas!',
 		type: 'Filler',
-		explanation: 'Continuation of the Land of Tea filler arc.'
+		explanation:
+			'Continuation of the Land of Tea arc. Focuses on a race across the ocean that has no relevance to the main storyline.'
 	},
 	{
 		number: '104',
 		title: 'Run Idate Run! The Forged Report!',
 		type: 'Filler',
-		explanation: 'Filler episode in the same arc.'
+		explanation: 'More of the Land of Tea filler arc.'
 	},
 	{
 		number: '105',
 		title: 'A Fierce Battle of Rolling Thunder!',
 		type: 'Filler',
-		explanation: 'Part of the filler arc, no main story relevance.'
+		explanation:
+			'Land of Tea filler arc, featuring a battle that has no impact on the core plot of the series.'
 	},
 	{
 		number: '106',
 		title: 'The Last Leg: A Final Act of Desperation',
 		type: 'Filler',
-		explanation: 'Concludes the Land of Tea filler arc.'
+		explanation: 'Concludes the Land of Tea filler arc. Skippable Arc.'
 	},
 	{
 		number: '107',
@@ -816,32 +817,37 @@ export const naruto: Episode[] = [
 	{
 		number: '136',
 		title: 'Deep Cover?! A Super S-Ranked Mission',
-		type: 'Mixed Canon/Filler',
-		explanation: 'Considered mostly filler, but has small story elements.'
+		type: 'Filler',
+		explanation:
+			'Starts a filler arc involving a mission that is not part of the main story. It has minor plot elements but can be skipped without losing any crucial details.'
 	},
 	{
 		number: '137',
 		title: 'A Town of Outlaws: The Shadow of the Fuma Clan',
 		type: 'Filler',
-		explanation: 'Skippable filler with no major plot relevance.'
+		explanation:
+			'Introduces characters and a storyline about the Fuma Clan that is not part of the manga. It is a self-contained filler plot.'
 	},
 	{
 		number: '138',
 		title: 'Pure Betrayal, and a Fleeting Plea',
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc.'
+		explanation:
+			'Continuation of the Fuma Clan filler arc. This episode does not tie into any main plot developments.'
 	},
 	{
 		number: '139',
 		title: 'Pure Terror! The House of Orochimaru',
 		type: 'Filler',
-		explanation: 'Filler episode with no major plot relevance.'
+		explanation:
+			"This filler episode deals with Orochimaru's hideouts but does not add anything to his character or the overall plot."
 	},
 	{
 		number: '140',
 		title: "Two Heartbeats: Kabuto's Trap",
 		type: 'Filler',
-		explanation: 'Skippable filler with no main story connections.'
+		explanation:
+			'Part of a filler arc that continues to explore characters and events not present in the manga, making it non-essential.'
 	},
 	{
 		number: '141',
@@ -852,476 +858,536 @@ export const naruto: Episode[] = [
 	{
 		number: '142',
 		title: 'The Three Villains from the Maximum Security Prison',
-		type: 'Mixed Canon/Filler',
-		explanation: 'A new filler arc, you can skip if not interested.'
+		type: 'Filler',
+		explanation:
+			'New filler arc about a mission involving three escaped prisoners. Plot unrelated to the main story.'
 	},
 	{
 		number: '143',
 		title: "Ton Ton! I'm Counting on You!",
 		type: 'Filler',
-		explanation: 'Skippable filler.'
+		explanation:
+			'A filler episode featuring a mission led by Ton Ton, Tsunade’s pet pig. It is unrelated to any ongoing plotlines.'
 	},
 	{
 		number: '144',
 		title: 'A New Squad! Two People and a Dog?!',
 		type: 'Filler',
-		explanation: 'More filler with no significant ties to the main story.'
+		explanation:
+			'Part of a filler arc, focusing on a mission led by Naruto, Hinata, and Kiba. This storyline does not contribute to the main narrative.'
 	},
 	{
 		number: '145',
 		title: 'A New Formation: Ino-Shika-Cho!',
 		type: 'Filler',
-		explanation: 'Skippable filler, despite featuring beloved characters.'
+		explanation:
+			'Continues the filler arc. Although it involves popular characters, the story arc is not part of the main plot.'
 	},
 	{
 		number: '146',
 		title: "Orochimaru's Shadow",
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc.'
+		explanation:
+			"Another episode in a filler storyline about Orochimaru's schemes, but it does not reveal anything new or important."
 	},
 	{
 		number: '147',
 		title: "A Clash of Fate: You Can't Bring Me Down",
 		type: 'Filler',
-		explanation: 'Skippable filler, part of the same arc.'
+		explanation:
+			'Filler episode that continues an unimportant subplot. Skippable without losing any important story developments.'
 	},
 	{
 		number: '148',
 		title: 'The Search for the Rare Bikochu Beetle',
 		type: 'Filler',
-		explanation: 'A new filler arc focused on the Bikochu beetle. Can be skipped.'
+		explanation:
+			'Introduces a new mission involving the search for a rare beetle. This arc does not affect the main plot and is filler.'
 	},
 	{
 		number: '149',
 		title: "What's the Difference? Don't All Insects Look Alike?",
 		type: 'Filler',
-		explanation: 'Skippable filler, part of the Bikochu beetle arc.'
+		explanation:
+			'Part of the Bikochu beetle filler arc. This episode does not contain any key plot developments.'
 	},
 	{
 		number: '150',
 		title: 'A Battle of Bugs! The Deceivers and the Deceived',
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc.'
+		explanation:
+			'Continuation of the filler arc about the Bikochu beetle. It adds no new information to the main storyline.'
 	},
 	{
 		number: '151',
 		title: 'Blaze Away, Byakugan! This is My Ninja Way!',
 		type: 'Filler',
-		explanation: 'Concludes the filler arc, no major relevance to the main story.'
+		explanation:
+			'Concludes the Bikochu beetle filler arc. This arc is not referenced in the main story.'
 	},
 	{
 		number: '152',
 		title: 'Funeral March for the Living',
 		type: 'Filler',
-		explanation: 'Part of the filler arc with the Seven Ninja Swordsmen members.'
+		explanation:
+			'Begins a new filler arc focusing on a mission with minor characters. The story is not connected to the primary plotline.'
 	},
 	{
 		number: '153',
 		title: 'A Lesson Learned: The Iron Fist of Love',
 		type: 'Filler',
-		explanation: 'Continuation of the Seven Ninja Swordsmen filler arc.'
+		explanation:
+			'Continues the Seven Ninja Swordsmen filler arc. Does not tie into any major story arcs or characters.'
 	},
 	{
 		number: '154',
 		title: 'The Enemy of the Byakugan',
 		type: 'Filler',
-		explanation: 'More filler, focused on the Byakugan.'
+		explanation:
+			'Part of a filler arc focusing on Hinata and the Byakugan. It has no bearing on the main plot.'
 	},
 	{
 		number: '155',
 		title: 'The Dark Creeping Clouds',
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc.'
+		explanation:
+			'Filler episode continuing an unrelated mission. It does not contribute to the main storyline.'
 	},
 	{
 		number: '156',
 		title: "Raiga's Counterattack",
 		type: 'Filler',
-		explanation: 'More filler in the same arc, skippable.'
+		explanation:
+			'Continuation of a filler arc featuring a character named Raiga. This storyline is not connected to the main narrative.'
 	},
 	{
 		number: '157',
 		title: 'Run! The Curry of Life',
 		type: 'Filler',
-		explanation: 'A lighthearted filler episode.'
+		explanation:
+			"A lighthearted filler episode focusing on the 'Curry of Life.' It does not affect any core plot points."
 	},
 	{
 		number: '158',
 		title: 'Follow My Lead! The Great Survival Challenge',
 		type: 'Filler',
 		explanation:
-			'This filler episode features a survival challenge for new students, with good emotional and educational scenes.'
+			'A standalone filler episode featuring a training mission with new students. It focuses on teamwork and survival skills, but does not contribute to the main plot.'
 	},
 	{
 		number: '159',
 		title: 'The Bounty Hunter from the Wilderness',
 		type: 'Filler',
-		explanation: 'Focused on a thief named Gansuki, but can be skipped.'
+		explanation:
+			'This filler episode introduces a character named Gansuki, a bounty hunter. The plot is self-contained and does not connect to the main storyline.'
 	},
 	{
 		number: '160',
 		title: 'Hunt or Be Hunted?! Showdown at the O.K. Temple',
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc, still skippable.'
+		explanation:
+			'Continuation of the filler arc involving Gansuki. The story does not add anything significant to the overall plot of the series.'
 	},
 	{
 		number: '161',
 		title: 'The Appearance of Strange Visitors',
 		type: 'Filler',
-		explanation: 'Skippable filler, not enjoyable.'
+		explanation:
+			'A skippable filler episode featuring a humorous, standalone story with characters that do not reappear in the main plot.'
 	},
 	{
 		number: '162',
 		title: 'The Cursed Warrior',
 		type: 'Filler',
-		explanation: 'Part of the 161-167 filler arc, skippable with no significant story connections.'
+		explanation:
+			'Part of a filler arc involving a ghostly warrior. The storyline is not relevant to the primary events of Naruto and can be skipped.'
 	},
 	{
 		number: '163',
 		title: "The Tactician's Intent",
 		type: 'Filler',
-		explanation: 'Skippable filler, part of the 161-167 arc.'
+		explanation:
+			"Continuation of the 'Cursed Warrior' arc. It contains a self-contained mystery that does not affect the main story."
 	},
 	{
 		number: '164',
 		title: 'Too Late for Help',
 		type: 'Filler',
-		explanation: 'Another skippable filler episode in the 161-167 arc.'
+		explanation:
+			"Part of the 'Cursed Warrior' filler arc, focusing on a subplot that has no bearing on the overarching storyline."
 	},
 	{
 		number: '165',
 		title: 'The Death of Naruto',
 		type: 'Filler',
 		explanation:
-			'Skippable filler episode; despite the dramatic title, it has no major story relevance.'
+			'Despite its dramatic title, this filler episode is not related to the core plot and involves a false premise. It can be skipped.'
 	},
 	{
 		number: '166',
 		title: 'When Time Stands Still',
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc, skippable.'
+		explanation:
+			"Continuation of the 'Cursed Warrior' arc. This filler episode does not introduce any new canon elements."
 	},
 	{
 		number: '167',
 		title: 'When Egrets Flap Their Wings',
 		type: 'Filler',
-		explanation: 'The conclusion of the 161-167 filler arc, can be skipped.'
+		explanation:
+			"The conclusion of the 'Cursed Warrior' filler arc. It wraps up the story without adding to the main narrative."
 	},
 	{
 		number: '168',
 		title: 'Mix It, Stretch It, Boil It Up! Burn Copper Pot, Burn!',
 		type: 'Filler',
 		explanation:
-			'Skippable filler, focused on Naruto and the ramen chef. Features comedic moments but not important to the main story.'
+			'Comedic filler episode featuring Naruto and the ramen chef. It has no connections to the main plot.'
 	},
 	{
 		number: '169',
 		title: 'Remembrance: The Lost Page',
 		type: 'Filler',
-		explanation: 'Skippable filler with no connection to the main story.'
+		explanation:
+			'This filler episode involves a mission to recover a lost page. It does not connect to the main storyline and is skippable.'
 	},
 	{
 		number: '170',
 		title: 'The Closed Door',
 		type: 'Filler',
-		explanation: 'Skippable filler with no significant content.'
+		explanation:
+			'A filler episode that continues the story of a mission unrelated to the primary plot. It introduces no new significant details.'
 	},
 	{
 		number: '171',
 		title: 'Infiltration: The Set-Up!',
 		type: 'Filler',
-		explanation: 'Filler arc, not connected to the main story.'
+		explanation:
+			'Part of a filler arc that follows a mission to infiltrate an enemy base. The plot does not tie into the main events of the series.'
 	},
 	{
 		number: '172',
 		title: 'Despair: A Fractured Heart',
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc.'
+		explanation:
+			'Continues the filler arc. Focuses on character interactions and conflicts that are not part of the central storyline.'
 	},
 	{
 		number: '173',
 		title: 'The Battle at Sea: The Power Unleashed!',
 		type: 'Filler',
-		explanation: 'No connection to the main plot.'
+		explanation:
+			'A filler episode involving a sea battle. It does not contribute to the main plot of Naruto.'
 	},
 	{
 		number: '174',
 		title: 'Impossible! Celebrity Ninja Art - Money Style Jutsu',
 		type: 'Filler',
-		explanation: 'Skippable filler with no real impact on the story.'
+		explanation:
+			'A comedic filler episode featuring a parody of celebrity culture. It is unrelated to the main narrative.'
 	},
 	{
 		number: '175',
 		title: 'The Treasure Hunt is On!',
 		type: 'Filler',
-		explanation: 'Filler episode focused on a treasure hunt.'
+		explanation:
+			'A filler episode centered around a treasure hunt. The plot is lighthearted and does not affect the core storyline.'
 	},
 	{
 		number: '176',
 		title: 'Run, Dodge, Zigzag! Chase or Be Chased!',
 		type: 'Filler',
-		explanation: 'Skippable filler with no significant plot development.'
+		explanation:
+			'A skippable filler episode that focuses on a humorous chase. It has no bearing on the main events of the series.'
 	},
 	{
 		number: '177',
 		title: 'Please, Mr. Postman!',
 		type: 'Filler',
-		explanation: 'Another filler episode with no main story relevance.'
+		explanation:
+			'Another standalone filler episode. It features a simple plot involving mail delivery, with no connection to the main story.'
 	},
 	{
 		number: '178',
 		title: "Encounter! The Boy with a Star's Name",
 		type: 'Filler',
-		explanation: 'Part of the filler arc; no connection to the main story.'
+		explanation:
+			'Part of a filler arc set in a village with a unique star training. This story is not part of the original manga plot.'
 	},
 	{
 		number: '179',
 		title: 'The Remembered Lullaby',
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc, skippable.'
+		explanation:
+			"Continues the 'Star Village' arc. The storyline is exclusive to the anime and does not affect the main plot."
 	},
 	{
 		number: '180',
 		title: 'Hidden Jutsu! The Price of The Ninja Art: Kujaku',
 		type: 'Filler',
-		explanation: 'Filler with no ties to the main story.'
+		explanation:
+			"Part of the 'Star Village' filler arc. It focuses on a technique unique to the village, which does not appear in the main storyline."
 	},
 	{
 		number: '181',
 		title: 'Hoshikage: The Buried Truth',
 		type: 'Filler',
-		explanation: 'No significant impact on the overall plot, can be skipped.'
+		explanation:
+			"This filler episode concludes the 'Star Village' arc. It has no impact on the main plot."
 	},
 	{
 		number: '182',
 		title: 'Reunion: The Remaining Time',
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc; not relevant to the main story.'
+		explanation:
+			'Another filler episode, focusing on minor character stories. It is not part of the central narrative.'
 	},
 	{
 		number: '183',
 		title: "The Star's Radiance",
 		type: 'Filler',
-		explanation: 'Filler arc concludes, no major story connections.'
+		explanation:
+			"Wraps up the 'Star Village' arc. This arc can be skipped without losing any important plot details."
 	},
 	{
 		number: '184',
 		title: "Kiba's Long Day",
 		type: 'Filler',
-		explanation: 'Focuses on Kiba and Akamaru, skippable filler.'
+		explanation: 'A lighthearted filler featuring Kiba and Akamaru. Skippable.'
 	},
 	{
 		number: '185',
 		title: 'A Legend from the Hidden Leaf: The Onbaa',
 		type: 'Filler',
 		explanation:
-			'This filler episode is humorous, focusing on a strange creature called Onbaa. You can watch if you enjoy comedic moments.'
+			'Comedic filler episode about a creature called Onbaa. Does not affect the main plot.'
 	},
 	{
 		number: '186',
 		title: 'Laughing Shino',
 		type: 'Filler',
-		explanation: 'Another comedic filler featuring Shino, but can be skipped.'
+		explanation: 'Humorous filler episode centered on Shino behaving unusually. Skippable.'
 	},
 	{
 		number: '187',
 		title: 'Open for Business! The Leaf Moving Service',
 		type: 'Filler',
-		explanation: 'A skippable filler focusing on minor characters.'
+		explanation:
+			'Standalone filler episode involving a moving service run by the characters. Not related to the main story.'
 	},
 	{
 		number: '188',
 		title: 'Mystery of the Targeted Merchants',
 		type: 'Filler',
-		explanation: 'No main story relevance, can be skipped.'
+		explanation:
+			'This episode is part of a filler arc with a mystery plot. Not connected to the primary storyline.'
 	},
 	{
 		number: '189',
 		title: 'A Limitless Supply of Ninja Tools',
 		type: 'Filler',
-		explanation: 'Skippable filler without any main plot connections.'
+		explanation: 'Filler episode that explores a mission involving ninja tools. Skippable.'
 	},
 	{
 		number: '190',
 		title: 'The Byakugan Sees the Blind Spot!',
 		type: 'Filler',
-		explanation: 'Skippable filler featuring the Hyuuga clan.'
+		explanation: "Standalone episode that focuses on Hinata's Byakugan ability and training."
 	},
 	{
 		number: '191',
 		title: 'Forecast: Death! Cloudy with Chance of Sun!',
 		type: 'Filler',
-		explanation: 'Skippable filler with no significant content.'
+		explanation: 'Filler episode with a mystery involving strange weather patterns. Skippable.'
 	},
 	{
 		number: '192',
 		title: 'Ino Screams! Chubby Paradise!',
 		type: 'Filler',
 		explanation:
-			"A comedic filler with Ino, you can skip it if you're not interested in humorous filler episodes."
+			'A humorous filler episode focused on a mission involving Ino. Comedic relief episode.'
 	},
 	{
 		number: '193',
 		title: 'Viva Dojo Challenge! Youth Is All About Passion!',
 		type: 'Filler',
-		explanation: 'Another skippable comedic filler featuring Lee and Gai.'
+		explanation: 'A comedic filler featuring Lee and Gai in a dojo challenge. Skippable.'
 	},
 	{
 		number: '194',
 		title: 'The Mysterious Curse of the Haunted Castle',
 		type: 'Filler',
-		explanation: 'A spooky, yet skippable, filler episode.'
+		explanation: 'A spooky, standalone filler episode set in a haunted castle. Skippable.'
 	},
 	{
 		number: '195',
 		title: 'The Third Super-Beast!',
 		type: 'Filler',
-		explanation: 'Filler focusing on minor characters, not important to the main story.'
+		explanation:
+			'Filler episode focusing on the rivalry between Lee and Gai. It introduces a minor character but has no relevance to the main plot.'
 	},
 	{
 		number: '196',
 		title: 'Hot-Blooded Confrontation: Student vs. Sensei',
 		type: 'Filler',
-		explanation: 'A filler featuring a face-off between students and sensei. Can be skipped.'
+		explanation:
+			'Lighthearted filler episode featuring sparring matches between students and their mentors.'
 	},
 	{
 		number: '197',
 		title: 'Crisis: The Hidden Leaf 11 Gather!',
 		type: 'Filler',
-		explanation: 'Skippable filler with no main plot relevance.'
+		explanation:
+			'Filler episode that brings together several characters for a minor mission. Skippable.'
 	},
 	{
 		number: '198',
 		title: "The ANBU Gives Up? Naruto's Recollection",
 		type: 'Filler',
-		explanation: 'Skippable filler.'
+		explanation: "Recap-style filler episode focusing on past events from Naruto's perspective."
 	},
 	{
 		number: '199',
 		title: 'The Missed Target',
 		type: 'Filler',
-		explanation: 'Another skippable filler episode.'
+		explanation:
+			'Standalone filler episode involving a mission that is unrelated to the main story.'
 	},
 	{
 		number: '200',
 		title: 'The Powerful Helper',
 		type: 'Filler',
-		explanation: 'Filler without any significant main story details.'
+		explanation:
+			'Filler episode around a mission involving a new character. The plot is not connected to the main storyline.'
 	},
 	{
 		number: '201',
 		title: 'Multiple Traps! Countdown to Destruction',
 		type: 'Filler',
-		explanation: 'Part of the filler arc, not important to the overall plot.'
+		explanation:
+			'Part of a filler arc involving a mission with a countdown element. It does not influence the overall plot of the series.'
 	},
 	{
 		number: '202',
 		title: 'The Top 5 Ninja Battles',
 		type: 'Filler',
-		explanation: 'Recap-style filler episode, can be skipped.'
+		explanation:
+			'Recap-style filler episode that reviews notable battles in the series. It offers no new story content and can be skipped.'
 	},
 	{
 		number: '203',
 		title: "Kurenai's Decision: Squad 8 Left Behind",
 		type: 'Filler',
-		explanation: "Skippable filler featuring Kurenai's team."
+		explanation:
+			'Filler episode focusing on Kurenai and her team. It explores their dynamics but does not add to the main plot.'
 	},
 	{
 		number: '204',
 		title: "Yakumo's Sealed Power",
 		type: 'Filler',
-		explanation: 'Filler episode with no significant story connections.'
+		explanation:
+			'Part of a filler arc about a character named Yakumo. This arc is exclusive to the anime.'
 	},
 	{
 		number: '205',
 		title: "Kurenai's Top-Secret Mission: The Promise with the Third Hokage",
 		type: 'Filler',
-		explanation: 'Skippable filler.'
+		explanation:
+			"Continuation of the Yakumo arc. It delves into backstory elements that are not relevant to the manga's plot."
 	},
 	{
 		number: '206',
 		title: 'Genjutsu or Reality?',
 		type: 'Filler',
-		explanation: 'Filler arc continues, skippable.'
+		explanation:
+			'Part of the Yakumo filler arc. It features a focus on genjutsu but does not contribute to the core storyline.'
 	},
 	{
 		number: '207',
 		title: 'The Supposed Sealed Ability',
 		type: 'Filler',
-		explanation: 'No ties to the main story, can be skipped.'
+		explanation: 'Continuation of the Yakumo arc. The plot remains filler and skippable.'
 	},
 	{
 		number: '208',
 		title: 'The Weight of the Prized Artifact',
 		type: 'Filler',
-		explanation: 'Skippable filler episode.'
+		explanation:
+			'Episode revolving around the protection of an artifact. It is a standalone story that does not connect to the main narrative.'
 	},
 	{
 		number: '209',
 		title: 'The Enemy: Ninja Dropouts',
 		type: 'Filler',
-		explanation: 'Another skippable filler arc.'
+		explanation: 'Part of a filler arc featuring rogue ninja. Skippable.'
 	},
 	{
 		number: '210',
 		title: 'The Bewildering Forest',
 		type: 'Filler',
-		explanation: 'No connection to the main plot, can be skipped.'
+		explanation: 'Continuation of the rogue ninja arc. Skippable.'
 	},
 	{
 		number: '211',
 		title: 'Memory of Flames',
 		type: 'Filler',
-		explanation: 'Part of a filler arc, not connected to the main story.'
+		explanation:
+			'Another episode in the rogue ninja arc. It introduces minor characters and conflicts not found in the main story.'
 	},
 	{
 		number: '212',
 		title: 'To Each His Own Path',
 		type: 'Filler',
-		explanation: 'Skippable filler episode.'
+		explanation:
+			'A filler episode focusing on personal conflicts within the rogue ninja arc. Skippable.'
 	},
 	{
 		number: '213',
 		title: 'Vanished Memories',
 		type: 'Filler',
-		explanation: 'Filler arc with no impact on the overall story.'
+		explanation: 'Continues the filler arc without adding new canon elements. Skippable.'
 	},
 	{
 		number: '214',
 		title: 'Bringing Back Reality',
 		type: 'Filler',
-		explanation: 'Skippable filler, no story relevance.'
+		explanation:
+			'Part of the rogue ninja filler arc, involving a mission that does not affect the overall plot.'
 	},
 	{
 		number: '215',
 		title: 'A Past to Be Erased',
 		type: 'Filler',
-		explanation: 'Skippable filler with no significant content.'
+		explanation:
+			'Concludes the rogue ninja filler arc. The story arc does not influence the main events of Naruto.'
 	},
 	{
 		number: '216',
 		title: 'The Targeted Shukaku',
 		type: 'Filler',
 		explanation:
-			"This episode begins a filler arc. While it's not directly related to the main plot, watching from 216-219 helps understand the last canon episode (220)."
+			'Starts a new filler arc involving Gaara and Shukaku. The plot is not part of the manga.'
 	},
 	{
 		number: '217',
 		title: 'Sand Alliance with the Leaf Shinobi',
 		type: 'Filler',
-		explanation: 'Continuation of the filler arc.'
+		explanation:
+			'Continuation of the filler arc involving a mission to protect the Sand Village, Can be skipped.'
 	},
 	{
 		number: '218',
 		title: 'The Counterattack!',
 		type: 'Filler',
-		explanation: 'Filler, part of the same arc.'
+		explanation:
+			'Part of the Sand Village filler arc. Features battles that are unrelated to the main plot.'
 	},
 	{
 		number: '219',
 		title: 'The Ultimate Weapon Reborn',
 		type: 'Filler',
-		explanation: 'The final episode in this filler arc.'
+		explanation:
+			'Concludes the Sand Village filler arc. The events are not canon and do not affect the core storyline.'
 	},
 	{
 		number: '220',
