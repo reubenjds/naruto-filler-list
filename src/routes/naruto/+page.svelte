@@ -127,7 +127,7 @@
 						{#each Episodes as episode}
 							<tr>
 								<td>{episode.number}</td>
-								<td class={showTitles ? '' : 'blur'}>{episode.title}</td>
+								<td class={showTitles ? '' : ' text-transparent'}>{episode.title}</td>
 								<td>
 									<span
 										class="badge {episode.type === 'Filler'
