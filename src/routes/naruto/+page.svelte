@@ -24,7 +24,13 @@
 		}
 
 		if (selectedEpisode) {
-			Episodes = Episodes.filter((episode) => episode.number.includes(selectedEpisode.trim()));
+			if (isNaN(Number(selectedEpisode)) && showTitles) {
+				Episodes = Episodes.filter((episode) =>
+					episode.title.toLowerCase().includes(selectedEpisode.trim().toLowerCase())
+				);
+			} else {
+				Episodes = Episodes.filter((episode) => episode.number.includes(selectedEpisode.trim()));
+			}
 		}
 	}
 
