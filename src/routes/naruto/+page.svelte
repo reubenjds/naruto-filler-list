@@ -44,20 +44,22 @@
 			/>
 			{#if isSmallScreen}
 				<!-- Modal for small screens -->
-				<button class="btn join-item m-1" on:click={() => modal.showModal()}>Options</button>
-				<dialog bind:this={modal} class="modal">
-					<div class="modal-box space-y-4">
-						<h3 class="text-lg font-bold">Options</h3>
+				<input type="checkbox" id="modal-toggle" class="modal-toggle" />
+				<div class="modal">
+					<div class="modal-box relative flex flex-col gap-2">
+						<label for="modal-toggle" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+							>✕</label
+						>
 						<select
 							bind:value={selectedArc}
-							class="select select-bordered w-full max-w-xs join-item mt-4"
+							class="select select-bordered w-full max-w-xs join-item mt-6"
 						>
 							<option value={-1} selected>All Episodes</option>
 							{#each narutoArcs as arc, index}
 								<option value={index}>{arc.name}</option>
 							{/each}
 						</select>
-						<div class="form-control mt-4">
+						<div class="form-control">
 							<label class="label cursor-pointer">
 								<span class="label-text">Show Episode Titles</span>
 								<input
@@ -67,15 +69,9 @@
 								/>
 							</label>
 						</div>
-						<button
-							class=" justify-center place-items-center badge-xs badge-error absolute right-3 top-1 transition duration-300 rounded-full"
-							on:click={() => modal.close()}>x</button
-						>
 					</div>
-					<form method="dialog" class="modal-backdrop">
-						<button>close</button>
-					</form>
-				</dialog>
+				</div>
+				<label for="modal-toggle" class="btn join-item m-1">Options</label>
 			{:else}
 				<!-- Dropdown for larger screens -->
 				<details class="dropdown">
