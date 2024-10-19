@@ -606,7 +606,8 @@ export const naruto: Episode[] = [
 		number: '101',
 		title: "Gotta See! Gotta Know! Kakashi-Sensei's True Face!",
 		type: 'Filler',
-		explanation: "Humorous episode focused on Team 7's attempts to see Kakashi's face."
+		explanation:
+			"Humorous episode focused on Team 7's attempts to see Kakashi's face. Recommended Watch"
 	},
 	{
 		number: '102',
@@ -902,7 +903,7 @@ export const naruto: Episode[] = [
 		title: 'The Search for the Rare Bikochu Beetle',
 		type: 'Filler',
 		explanation:
-			'Introduces a new mission involving the search for a rare beetle. This arc does not affect the main plot and is filler.'
+			'Introduces a new mission involving the search for a rare beetle. Recommended Watch.'
 	},
 	{
 		number: '149',
@@ -1041,8 +1042,7 @@ export const naruto: Episode[] = [
 		number: '168',
 		title: 'Mix It, Stretch It, Boil It Up! Burn Copper Pot, Burn!',
 		type: 'Filler',
-		explanation:
-			'Comedic filler episode featuring Naruto and the ramen chef. It has no connections to the main plot.'
+		explanation: 'Comedic filler episode featuring Naruto and the ramen chef. Recommended Watch.'
 	},
 	{
 		number: '169',
@@ -1166,7 +1166,7 @@ export const naruto: Episode[] = [
 		number: '186',
 		title: 'Laughing Shino',
 		type: 'Filler',
-		explanation: 'Humorous filler episode centered on Shino behaving unusually. Skippable.'
+		explanation: 'Humorous filler episode centered on Shino behaving unusually. Recommended Watch.'
 	},
 	{
 		number: '187',
@@ -1204,14 +1204,13 @@ export const naruto: Episode[] = [
 		number: '192',
 		title: 'Ino Screams! Chubby Paradise!',
 		type: 'Filler',
-		explanation:
-			'A humorous filler episode focused on a mission involving Ino. Comedic relief episode.'
+		explanation: 'Humorous filler episode focused on a mission involving Ino. Recommended Watch.'
 	},
 	{
 		number: '193',
 		title: 'Viva Dojo Challenge! Youth Is All About Passion!',
 		type: 'Filler',
-		explanation: 'A comedic filler featuring Lee and Gai in a dojo challenge. Skippable.'
+		explanation: 'A comedic filler featuring Lee and Gai in a dojo challenge. Recommended Watch.'
 	},
 	{
 		number: '194',
