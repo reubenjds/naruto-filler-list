@@ -10,7 +10,7 @@
 		{
 			name: 'Naruto Shippuden',
 			image: '/naruto_shippuden.jpg',
-			link: '/naruto_shippuden'
+			link: '/shippuden'
 		}
 	];
 </script>
