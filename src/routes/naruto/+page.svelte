@@ -18,8 +18,7 @@
 		if (selectedArc !== -1) {
 			const arc = narutoArcs[selectedArc];
 			Episodes = naruto.filter(
-				(episode) =>
-					Number(episode.number) <= arc.episode_end && Number(episode.number) >= arc.episode_start
+				(episode) => episode.number <= arc.episode_end && episode.number >= arc.episode_start
 			);
 		} else {
 			Episodes = naruto;
@@ -31,7 +30,9 @@
 					episode.title.toLowerCase().includes(selectedEpisode.trim().toLowerCase())
 				);
 			} else {
-				Episodes = Episodes.filter((episode) => episode.number.includes(selectedEpisode.trim()));
+				Episodes = Episodes.filter((episode) =>
+					episode.number.toString().includes(selectedEpisode.trim())
+				);
 			}
 		}
 
@@ -251,7 +252,7 @@
 													<h3 class="text-lg font-bold">
 														Episode {episode.number} - {episode.type}
 													</h3>
-													<p class="py-4">{episode.explanation}</p>
+													<p class="py-4">{episode.explanation ?? ''}</p>
 												</div>
 											</div>
 											<label
