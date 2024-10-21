@@ -57,7 +57,7 @@
 
 <main>
 	<div class="flex flex-col place-items-center min-h-screen gap-4 p-10">
-		<h1 class="text-4xl font-bold text-center pt-2 pb-2">Naruto Filler List</h1>
+		<h1 class="text-4xl font-bold text-center pt-2 pb-2">Naruto: Shippuden Filler List</h1>
 		<div class="join flex place-items-center">
 			<input
 				bind:value={selectedEpisode}
