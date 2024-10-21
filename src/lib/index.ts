@@ -1,10 +1,10 @@
 // place files you want to import through the `$lib` alias in this folder.
 
 export type Episode = {
-	number: string;
+	number: number;
 	title: string;
 	type: string;
-	explanation: string;
+	explanation?: string;
 };
 
 export type Arc = {

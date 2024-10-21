@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { naruto, narutoArcs } from '$lib/episodes';
+	import { narutoShippuden, narutoShippudenArcs } from '$lib/episodes';
 	import Episode from '$lib/Episode.svelte';
 	import { onMount } from 'svelte';
 
 	let isSmallScreen = false;
-	let Episodes = naruto;
+	let Episodes = narutoShippuden;
 
 	let selectedArc = -1;
 	let selectedEpisode = '';
@@ -16,12 +16,12 @@
 
 	$: {
 		if (selectedArc !== -1) {
-			const arc = narutoArcs[selectedArc];
-			Episodes = naruto.filter(
+			const arc = narutoShippudenArcs[selectedArc];
+			Episodes = narutoShippuden.filter(
 				(episode) => episode.number <= arc.episode_end && episode.number >= arc.episode_start
 			);
 		} else {
-			Episodes = naruto;
+			Episodes = narutoShippuden;
 		}
 
 		if (selectedEpisode) {
@@ -57,7 +57,7 @@
 
 <main>
 	<div class="flex flex-col place-items-center min-h-screen gap-4 p-10">
-		<h1 class="text-4xl font-bold text-center pt-2 pb-2">Naruto Filler List</h1>
+		<h1 class="text-4xl font-bold text-center pt-2 pb-2">Naruto: Shippuden Filler List</h1>
 		<div class="join flex place-items-center">
 			<input
 				bind:value={selectedEpisode}
@@ -74,7 +74,7 @@
 						>
 						<select bind:value={selectedArc} class="select select-bordered w-full join-item mt-6">
 							<option value={-1} selected>All Episodes</option>
-							{#each narutoArcs as arc, index}
+							{#each narutoShippudenArcs as arc, index}
 								<option value={index}>{arc.name}</option>
 							{/each}
 						</select>
@@ -147,7 +147,7 @@
 						<div class="flex flex-col gap-1 p-2">
 							<select bind:value={selectedArc} class="select select-bordered w-full join-item">
 								<option value={-1} selected>All Arcs</option>
-								{#each narutoArcs as arc, index}
+								{#each narutoShippudenArcs as arc, index}
 									<option value={index}>{arc.name}</option>
 								{/each}
 							</select>
