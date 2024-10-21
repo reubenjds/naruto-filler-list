@@ -1479,46 +1479,37 @@ export const narutoShippuden: Episode[] = [
 	{
 		number: 21,
 		title: "Sasori's Real Face",
-		type: 'Canon',
-		explanation: 'The intense battle between Sakura, Chiyo, and Sasori reveals his real face.'
+		type: 'Canon'
 	},
 	{
 		number: 22,
 		title: "Chiyo's Secret Skills",
-		type: 'Canon',
-		explanation: 'Chiyo reveals her powerful puppetry techniques to combat Sasori.'
+		type: 'Canon'
 	},
 	{
 		number: 23,
 		title: 'Father and Mother',
-		type: 'Canon',
-		explanation: 'Sasori’s backstory is explored as Chiyo uses his parent puppets in the battle.'
+		type: 'Canon'
 	},
 	{
 		number: 24,
 		title: 'The Third Kazekage',
-		type: 'Canon',
-		explanation:
-			'Sasori reveals his strongest puppet, the Third Kazekage, which leads to an epic showdown.'
+		type: 'Canon'
 	},
 	{
 		number: 25,
 		title: 'Three Minutes Between Life and Death',
-		type: 'Canon',
-		explanation:
-			'Sakura displays her medical prowess, and the battle intensifies against Sasori’s poison.'
+		type: 'Canon'
 	},
 	{
 		number: 26,
 		title: 'Puppet Fight: 10 vs. 100!',
-		type: 'Canon',
-		explanation: 'Chiyo and Sakura face Sasori’s overwhelming army of 100 puppets.'
+		type: 'Canon'
 	},
 	{
 		number: 27,
 		title: 'Impossible Dream',
-		type: 'Canon',
-		explanation: 'Sakura and Chiyo manage to outsmart Sasori, but not without sacrifices.'
+		type: 'Canon'
 	},
 	{
 		number: 28,
@@ -1530,181 +1521,142 @@ export const narutoShippuden: Episode[] = [
 	{
 		number: 29,
 		title: 'Kakashi Enlightened!',
-		type: 'Canon',
-		explanation: 'Kakashi reveals his Mangekyo Sharingan to fight Deidara.'
+		type: 'Canon'
 	},
 	{
 		number: 30,
 		title: 'Aesthetics of an Instant',
-		type: 'Canon',
-		explanation:
-			'Deidara’s escape plan is put into action, but Team Kakashi continues to pursue him.'
+		type: 'Canon'
 	},
 	{
 		number: 31,
 		title: 'The Legacy',
-		type: 'Canon',
-		explanation:
-			"The aftermath of Gaara's kidnapping is explored, and Naruto reflects on the mission."
+		type: 'Canon'
 	},
 	{
 		number: 32,
 		title: 'Return of the Kazekage',
-		type: 'Canon',
-		explanation:
-			'The villagers celebrate Gaara’s return as Kazekage after his near-death experience.'
+		type: 'Canon'
 	},
 	{
 		number: 33,
 		title: 'The New Target',
-		type: 'Canon',
-		explanation: 'Team Kakashi sets off on a new mission with a focus on Orochimaru.'
+		type: 'Canon'
 	},
 	{
 		number: 34,
 		title: 'Formation! New Team Kakashi',
-		type: 'Canon',
-		explanation: 'With Sasuke missing, a new team member, Sai, is introduced to join Team Kakashi.'
+		type: 'Canon'
 	},
 	{
 		number: 35,
 		title: 'An Unnecessary Addition',
-		type: 'Canon',
-		explanation: 'Sai struggles to fit in with Team Kakashi as they head out on their mission.'
+		type: 'Canon'
 	},
 	{
 		number: 36,
 		title: 'The Fake Smile',
-		type: 'Canon',
-		explanation: 'Naruto grows suspicious of Sai, who hides his emotions and true intentions.'
+		type: 'Canon'
 	},
 	{
 		number: 37,
 		title: 'Untitled',
-		type: 'Canon',
-		explanation:
-			'Team Kakashi faces internal conflicts as they learn more about Sai’s secret mission.'
+		type: 'Canon'
 	},
 	{
 		number: 38,
 		title: 'Simulation',
-		type: 'Canon',
-		explanation: 'Yamato tests the abilities and teamwork of the newly formed Team Kakashi.'
+		type: 'Canon'
 	},
 	{
 		number: 39,
 		title: 'The Tenchi Bridge',
-		type: 'Canon',
-		explanation:
-			'Team Kakashi arrives at Tenchi Bridge, hoping to meet one of Orochimaru’s subordinates.'
+		type: 'Canon'
 	},
 	{
 		number: 40,
 		title: 'Nine-Tails Unleashed',
-		type: 'Canon',
-		explanation:
-			'Naruto’s anger causes him to lose control and partially transform into the Nine-Tails.'
+		type: 'Canon'
 	},
 	{
 		number: 41,
 		title: 'The Top-Secret Mission Begins',
-		type: 'Canon',
-		explanation:
-			'Yamato steps in to control Naruto’s transformation, while Sai’s secret mission is hinted at.'
+		type: 'Canon'
 	},
 	{
 		number: 42,
 		title: 'Orochimaru vs. Jinchuriki',
-		type: 'Canon',
-		explanation: 'A fierce battle between Naruto and Orochimaru takes place.'
+		type: 'Canon'
 	},
 	{
 		number: 43,
 		title: "Sakura's Tears",
-		type: 'Canon',
-		explanation: 'Sakura feels helpless watching Naruto lose control in his Nine-Tails form.'
+		type: 'Canon'
 	},
 	{
 		number: 44,
 		title: 'The Secret of the Battle!',
-		type: 'Canon',
-		explanation: 'The battle continues, and Naruto’s unstable power threatens to overwhelm him.'
+		type: 'Canon'
 	},
 	{
 		number: 45,
 		title: 'The Consequences of Betrayal',
-		type: 'Canon',
-		explanation:
-			'Naruto begins to realize the cost of his actions, while Sai makes a crucial decision.'
+		type: 'Canon'
 	},
 	{
 		number: 46,
 		title: 'The Unfinished Page',
-		type: 'Canon',
-		explanation: 'Sai’s hidden motives are revealed, showing his true intentions regarding Sasuke.'
+		type: 'Canon'
 	},
 	{
 		number: 47,
 		title: 'Infiltration: The Den of the Snake!',
-		type: 'Canon',
-		explanation: 'Team Kakashi infiltrates Orochimaru’s hideout in search of Sasuke.'
+		type: 'Canon'
 	},
 	{
 		number: 48,
 		title: 'Bonds',
-		type: 'Canon',
-		explanation:
-			'Sai begins to understand the value of bonds as he connects with Naruto and the team.'
+		type: 'Canon'
 	},
 	{
 		number: 49,
 		title: 'Something Important...',
-		type: 'Canon',
-		explanation: 'Naruto reflects on the importance of friendships and his desire to save Sasuke.'
+		type: 'Canon'
 	},
 	{
 		number: 50,
 		title: "The Picture Book's Story",
-		type: 'Canon',
-		explanation: 'Sai’s past and connection to his brother are explored through a picture book.'
+		type: 'Canon'
 	},
 	{
 		number: 51,
 		title: 'Reunion',
-		type: 'Canon',
-		explanation: 'Naruto and Sakura finally reunite with Sasuke, but tensions run high.'
+		type: 'Canon'
 	},
 	{
 		number: 52,
 		title: 'The Power of Uchiha',
-		type: 'Canon',
-		explanation:
-			'Sasuke displays his incredible new abilities as Team Kakashi tries to reason with him.'
+		type: 'Canon'
 	},
 	{
 		number: 53,
 		title: 'Title',
-		type: 'Canon',
-		explanation: 'The confrontation with Sasuke reaches a turning point as Orochimaru intervenes.'
+		type: 'Canon'
 	},
 	{
 		number: 54,
 		title: 'Nightmare',
-		type: 'Canon',
-		explanation:
-			'Naruto dreams about Sasuke’s betrayal, driving his determination to bring him back.'
+		type: 'Canon'
 	},
 	{
 		number: 55,
 		title: 'Wind',
-		type: 'Canon',
-		explanation: 'Naruto begins his wind-style Rasengan training under Kakashi and Yamato.'
+		type: 'Canon'
 	},
 	{
 		number: 56,
 		title: 'Squirming',
-		type: 'Canon',
-		explanation: 'Naruto’s intense training continues as he strives to master the wind element.'
+		type: 'Canon'
 	},
 	{
 		number: 57,

@@ -41,7 +41,7 @@
 				</div>
 
 				<p class="line-clamp-5 whitespace-pre-line italic text-sm md:text-base lg:text-lg">
-					{episode.explanation}
+					{episode.explanation ?? ''}
 				</p>
 				<div class="flex justify-between items-center">
 					<p class="text-xs md:text-sm lg:text-base bg-base-500">{episode.type}</p>

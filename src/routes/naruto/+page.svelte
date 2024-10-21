@@ -235,7 +235,7 @@
 								<td class={showTitles ? 'md:text-base' : 'md:text-base text-transparent'}
 									>{episode.title}</td
 								>
-								{#if episode.type === 'Filler' || episode.explanation !== ''}
+								{#if episode.type === 'Filler' || (episode.explanation ?? '') !== ''}
 									<td class="md:text-base text-center">
 										{#if isSmallScreen}
 											<input
