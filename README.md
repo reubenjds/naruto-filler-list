@@ -1,38 +1,59 @@
-# create-svelte
+# NarutoFiller.me
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+[NarutoFiller.me](https://narutofiller.me/) provides a comprehensive filler list for **Naruto** and **Naruto: Shippuden**.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Episode Guide**: Lists all Naruto episodes with indicators for filler and canon episodes.
+- **Filtering Options**: Allows users to filter episodes based on whether they are filler, canon, or mixed.
+- **Episode Details**: Provides brief descriptions for Filler and Mixed episodes, giving a quick overview of what each episode is about.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Contributing
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Contributions are welcome! If you'd like to improve the project, please fork the repository and create a pull request.
 
-## Developing
+1. Fork the Project
+2. Create a Branch (`git checkout -b feature`)
+3. Commit your Changes (`git commit -m 'Add some feature'`)
+4. Push to the Branch (`git push origin feature`)
+5. Open a Pull Request
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Getting Started
 
-```bash
-npm run dev
+To run this project locally, follow these steps:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+1. **Clone the Repository**:
 
-## Building
+   ```bash
+   git clone https://github.com/reubenjds/naruto-filler-list.git
+   cd naruto-filler-list
+   ```
 
-To create a production version of your app:
+2. **Install Dependencies**:
 
-```bash
-npm run build
-```
+   Ensure you have [Node.js](https://nodejs.org/) installed, then install the required dependencies:
 
-You can preview the production build with `npm run preview`.
+   ```bash
+   npm install
+   ```
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+3. **Run the Development Server**:
+
+   Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   This will launch the website on `http://localhost:5173`.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- **Reddit Community**: Special thanks to the contributors of the following Reddit pages for detailed Naruto filler information:
+  - [Detailed Naruto Shippuden Filler Watching Guide](https://www.reddit.com/r/anime/comments/mvds6j/detailed_naruto_shippuden_filler_watching_guide/)
+  - [Ultimate Guide to Watch Naruto](https://www.reddit.com/r/Naruto/comments/k2lsxi/ultimate_guide_to_watch_naruto/)
+- Inspiration drawn from [AnimeFillerList's Naruto Guide](https://www.animefillerlist.com/shows/naruto) for episode classification and structure.
