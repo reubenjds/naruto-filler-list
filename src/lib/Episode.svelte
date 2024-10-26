@@ -2,6 +2,7 @@
 	import type { Episode } from '$lib/index';
 	export let episode: Episode;
 	export let showTitles: boolean;
+	export let showExplanations: boolean;
 
 	function epColour() {
 		if (episode.type === 'Filler') {
@@ -28,7 +29,7 @@
 					{episode.title}
 				</h2>
 				<p class="line-clamp-5 whitespace-pre-line italic text-sm md:text-base lg:text-lg">
-					{episode.explanation ?? ''}
+					{showExplanations ? (episode.explanation ?? '') : ''}
 				</p>
 				<div class="flex justify-between items-center">
 					<p class="text-xs md:text-sm lg:text-base bg-base-500">{episode.type}</p>
@@ -41,7 +42,7 @@
 				</div>
 
 				<p class="line-clamp-5 whitespace-pre-line italic text-sm md:text-base lg:text-lg">
-					{episode.explanation ?? ''}
+					{showExplanations ? (episode.explanation ?? '') : ''}
 				</p>
 				<div class="flex justify-between items-center">
 					<p class="text-xs md:text-sm lg:text-base bg-base-500">{episode.type}</p>
