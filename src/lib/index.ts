@@ -12,3 +12,9 @@ export type Arc = {
 	episode_start: number;
 	episode_end: number;
 };
+
+export type QuickList = {
+	Manga_Canon_Episodes: string[];
+	Mixed_Canon_Filler_Episodes: string[];
+	Filler_Episodes: string[];
+};

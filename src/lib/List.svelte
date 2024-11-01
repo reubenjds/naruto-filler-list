@@ -1,10 +1,12 @@
 <script lang="ts">
-	import type { Arc, Episode } from '$lib/index';
+	import type { Arc, Episode, QuickList } from '$lib/index';
 	import Ep from '$lib/Episode.svelte';
 	import { onMount } from 'svelte';
 
 	export let naruto: Episode[];
 	export let narutoArcs: Arc[];
+	export let quickList: QuickList;
+	export let name: string;
 
 	let isSmallScreen = false;
 	let Episodes = naruto;
@@ -55,11 +57,63 @@
 	onMount(() => {
 		isSmallScreen = window.innerWidth < 640;
 	});
+
+	let openWelcomeModal = false;
 </script>
 
 <main>
-	<div class="flex flex-col place-items-center min-h-screen gap-4 p-10">
-		<h1 class="text-4xl font-bold text-center pt-2 pb-2">Naruto Filler List</h1>
+	<div class="navbar bg-base-100">
+		<div class="flex-1">
+			<a class="btn btn-ghost text-xl" href="/">Naruto </a>
+		</div>
+		<div class="flex-none">
+			<ul class="menu menu-horizontal px-1">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<li on:click={() => (openWelcomeModal = true)}><a>Quick List</a></li>
+				<li><a>About</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<input type="checkbox" id="my_modal_7" class="modal-toggle" />
+	<div class="modal" class:modal-open={openWelcomeModal}>
+		<div class="modal-box">
+			<div class="h-full overflow-x-auto">
+				<table class="table table-pin-rows">
+					<thead>
+						<tr>
+							<th class="text-green-500 text-base">Canon</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-white">{quickList.Manga_Canon_Episodes.join(', ')}</td></tr>
+					</tbody>
+					<thead>
+						<tr>
+							<th class="text-yellow-500 text-base">Mixed</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-white">{quickList.Mixed_Canon_Filler_Episodes.join(', ')}</td></tr>
+					</tbody>
+					<thead>
+						<tr>
+							<th class="text-red-500 text-base">Filler</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-white">{quickList.Filler_Episodes.join(', ')}</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<button class="modal-backdrop" on:click={() => (openWelcomeModal = false)}>Close</button>
+	</div>
+	<div class="flex flex-col place-items-center h-full gap-4 m-6">
+		<h1 class="text-4xl font-bold text-center pt-4">{name} Filler List</h1>
+
 		<div class="join flex place-items-center">
 			<input
 				bind:value={selectedEpisode}
