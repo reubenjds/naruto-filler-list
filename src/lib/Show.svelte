@@ -2,13 +2,8 @@
 	export let show: { name: string; image: string; link: string };
 </script>
 
-<div class="card bg-base-100 w-full sm:w-96">
+<a href={show.link} class="w-full sm:w-96 md:opacity-50 md:hover:opacity-100">
 	<figure>
-		<img src={show.image} alt={show.name} class="w-full h-auto" />
+		<img src={show.image} alt={show.name} class="w-full" />
 	</figure>
-	<div class="card-body">
-		<div class="card-actions justify-center">
-			<a href={show.link} class="btn btn-warning">{show.name}</a>
-		</div>
-	</div>
-</div>
+</a>
