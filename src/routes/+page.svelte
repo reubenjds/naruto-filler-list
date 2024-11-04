@@ -19,7 +19,9 @@
 	<div class="flex flex-col justify-between place-items-center min-h-screen p-5">
 		<div class="navbar bg-base-100">
 			<div class="flex-1">
-				<a class="btn btn-ghost text-xl">daisyUI</a>
+				<a class="btn btn-ghost text-xl">
+					<img src="/logo.png" alt="Logo" class="h-full w-full" />
+				</a>
 			</div>
 			<div class="flex-none">
 				<ul class="menu menu-horizontal px-1">
