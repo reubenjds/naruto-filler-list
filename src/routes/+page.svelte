@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Show from '$lib/Show.svelte';
+	import openWelcomeModal from './+layout.svelte';
 
 	let shows = [
 		{
@@ -16,28 +17,7 @@
 </script>
 
 <main>
-	<div class="flex flex-col justify-between place-items-center min-h-screen p-5">
-		<div class="navbar bg-base-100">
-			<div class="flex-1">
-				<a class="btn btn-ghost text-xl">
-					<img src="/logo.png" alt="Logo" class="h-full w-full" />
-				</a>
-			</div>
-			<div class="flex-none">
-				<ul class="menu menu-horizontal px-1">
-					<li><a>Link</a></li>
-					<li>
-						<details>
-							<summary>Parent</summary>
-							<ul class="bg-base-100 rounded-t-none p-2">
-								<li><a>Link 1</a></li>
-								<li><a>Link 2</a></li>
-							</ul>
-						</details>
-					</li>
-				</ul>
-			</div>
-		</div>
+	<div class="grid grid-cols-1 place-items-center p-5 min-h-screen max-h-full">
 		<!-- <h1 class="text-4xl font-bold text-center py-2">Naruto Filler List</h1> -->
 		<div>
 			<div class="flex flex-col sm:flex-row gap-12">

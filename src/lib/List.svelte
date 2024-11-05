@@ -2,6 +2,7 @@
 	import type { Arc, Episode, QuickList } from '$lib/index';
 	import Ep from '$lib/Episode.svelte';
 	import { onMount } from 'svelte';
+	import { openQuickList } from '$lib/store.ts';
 
 	export let naruto: Episode[];
 	export let narutoArcs: Arc[];
@@ -57,28 +58,11 @@
 	onMount(() => {
 		isSmallScreen = window.innerWidth < 640;
 	});
-
-	let openWelcomeModal = false;
 </script>
 
 <main>
-	<div class="navbar bg-base-100">
-		<div class="flex-1">
-			<a class="btn btn-ghost text-xl" href="/">Naruto </a>
-		</div>
-		<div class="flex-none">
-			<ul class="menu menu-horizontal px-1">
-				<!-- svelte-ignore a11y-missing-attribute -->
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-				<li on:click={() => (openWelcomeModal = true)}><a>Quick List</a></li>
-				<li><a>About</a></li>
-			</ul>
-		</div>
-	</div>
-
 	<input type="checkbox" id="my_modal_7" class="modal-toggle" />
-	<div class="modal" class:modal-open={openWelcomeModal}>
+	<div class="modal" class:modal-open={$openQuickList}>
 		<div class="modal-box">
 			<div class="h-full overflow-x-auto">
 				<table class="table table-pin-rows">
@@ -109,7 +93,9 @@
 				</table>
 			</div>
 		</div>
-		<button class="modal-backdrop" on:click={() => (openWelcomeModal = false)}>Close</button>
+		<button class="modal-backdrop" on:click={() => openQuickList.update((value) => !value)}
+			>Close</button
+		>
 	</div>
 	<div class="flex flex-col place-items-center h-full gap-4 m-6">
 		<h1 class="text-4xl font-bold text-center pt-4">{name} Filler List</h1>
