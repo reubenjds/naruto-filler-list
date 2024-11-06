@@ -60,7 +60,6 @@
 
 <main>
 	<div class="flex flex-col place-items-center min-h-screen gap-4 p-5">
-
 		<div class="navbar bg-base-100 p-5">
 			<div class="flex-1">
 				<a class="btn btn-ghost" href="/">
@@ -80,11 +79,28 @@
 
 		<h1 class="text-4xl font-bold text-center pt-2 pb-2">Naruto Filler List</h1>
 		<div class="join flex place-items-center">
-			<input
-				bind:value={selectedEpisode}
-				class="input input-bordered join-item"
-				placeholder="Episode"
-			/>
+			<div class="flex relative place-items-center justify-center">
+				<input
+					bind:value={selectedEpisode}
+					type="text"
+					placeholder="Episode..."
+					class="pl-10 input input-bordered join-item"
+				/>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="absolute w-5 h-5 text-gray-500 left-3 top-3.5 pointer-events-none"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M11 5a6 6 0 016 6 6 6 0 01-1.354 3.965l3.657 3.657a1 1 0 11-1.414 1.414l-3.657-3.657A6 6 0 1111 5z"
+					/>
+				</svg>
+			</div>
 			{#if isSmallScreen}
 				<!-- Modal for small screens -->
 				<input type="checkbox" id="modal-toggle" class="modal-toggle" />
