@@ -29,7 +29,6 @@
 					<!-- svelte-ignore a11y-missing-attribute -->
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-					<li><a>About</a></li>
 				</ul>
 			</div>
 		</div>
