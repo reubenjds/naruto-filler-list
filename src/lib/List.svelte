@@ -1,11 +1,13 @@
 <script lang="ts">
-	import type { Arc, Episode } from '$lib/index';
+	import type { Arc, Episode, QuickList } from '$lib/index';
 	import Ep from '$lib/Episode.svelte';
 	import { onMount } from 'svelte';
 	import { openQuickList } from '$lib/store.ts';
 
+	export let name: string;
 	export let naruto: Episode[];
 	export let narutoArcs: Arc[];
+	export let quickList: QuickList;
 
 	let isSmallScreen = false;
 	let Episodes = naruto;
@@ -16,6 +18,7 @@
 	let showExplanations = true;
 	let useTable = false;
 	let selectedEpisodeType = 'all';
+	let optionsOpen = false;
 
 	$: {
 		if (selectedArc !== -1) {
@@ -59,6 +62,42 @@
 </script>
 
 <main>
+	<input type="checkbox" id="my_modal_7" class="modal-toggle" />
+	<div class="modal" class:modal-open={$openQuickList}>
+		<div class="modal-box">
+			<div class="h-full overflow-x-auto">
+				<table class="table table-pin-rows">
+					<thead>
+						<tr>
+							<th class="text-green-500 text-base">Canon</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-white">{quickList.Manga_Canon_Episodes.join(', ')}</td></tr>
+					</tbody>
+					<thead>
+						<tr>
+							<th class="text-yellow-500 text-base">Mixed</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-white">{quickList.Mixed_Canon_Filler_Episodes.join(', ')}</td></tr>
+					</tbody>
+					<thead>
+						<tr>
+							<th class="text-red-500 text-base">Filler</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="text-white">{quickList.Filler_Episodes.join(', ')}</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<button class="modal-backdrop" on:click={() => openQuickList.update((value) => !value)}
+			>Close</button
+		>
+	</div>
 	<div class="flex flex-col place-items-center min-h-screen gap-4 p-5">
 		<div class="navbar bg-base-100 p-5">
 			<div class="flex-1">
@@ -77,7 +116,7 @@
 			</div>
 		</div>
 
-		<h1 class="text-4xl font-bold text-center pt-2 pb-2">Naruto Filler List</h1>
+		<h1 class="text-4xl font-bold text-center pt-2 pb-2">{name} Filler List</h1>
 		<div class="join flex place-items-center">
 			<div class="flex relative place-items-center justify-center">
 				<input
@@ -103,11 +142,13 @@
 			</div>
 			{#if isSmallScreen}
 				<!-- Modal for small screens -->
-				<input type="checkbox" id="modal-toggle" class="modal-toggle" />
-				<div class="modal">
+				<input type="checkbox" id="my_modal_8" class="modal-toggle" />
+				<div class="modal" class:modal-open={optionsOpen}>
 					<div class="modal-box relative flex flex-col gap-2">
-						
-						<select bind:value={selectedArc} class="select select-bordered w-full border rounded-lg">
+						<select
+							bind:value={selectedArc}
+							class="select select-bordered w-full border rounded-lg"
+						>
 							<option value={-1} selected>All Arcs</option>
 							{#each narutoArcs as arc, index}
 								<option value={index}>{arc.name}</option>
@@ -181,18 +222,24 @@
 								/>
 							</label>
 						</div>
-
 					</div>
+					<button class="modal-backdrop" on:click={() => (optionsOpen = false)}>Close</button>
 				</div>
-				<label for="modal-toggle" class="btn join-item m-1">Options</label>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+				<label for="modal-toggle" class="btn join-item m-1" on:click={() => (optionsOpen = true)}
+					>Options</label
+				>
 			{:else}
 				<!-- Dropdown for larger screens -->
 				<details class="dropdown">
 					<summary class="btn join-item m-1">Options</summary>
 					<ul class="dropdown-content menu bg-base-100 rounded-box z-[99] w-max p-2 shadow">
 						<div class="flex flex-col gap-1 p-2">
-
-							<select bind:value={selectedArc} class="select select-bordered w-full border rounded-lg mt-1">
+							<select
+								bind:value={selectedArc}
+								class="select select-bordered w-full border rounded-lg mt-1"
+							>
 								<option value={-1} selected>All Arcs</option>
 								{#each narutoArcs as arc, index}
 									<option value={index}>{arc.name}</option>
@@ -266,7 +313,6 @@
 									/>
 								</label>
 							</div>
-
 						</div>
 					</ul>
 				</details>
