@@ -1,8 +1,13 @@
 <script lang="ts">
-	import { narutoShippuden, narutoShippudenArcs } from '$lib/episodes';
+	import { narutoShippuden, narutoShippudenArcs, narutoShippudenQuickList } from '$lib/episodes';
 	import List from '$lib/List.svelte';
 </script>
 
 <main>
-	<List naruto={narutoShippuden} narutoArcs={narutoShippudenArcs}></List>
+	<List
+		name={'Naruto: Shippuden'}
+		naruto={narutoShippuden}
+		narutoArcs={narutoShippudenArcs}
+		quickList={narutoShippudenQuickList}
+	></List>
 </main>
